@@ -26,16 +26,38 @@ let computerChoice = undefined;
 //Now I need the users input. Make a function named getHumanChoice. Use prompt to get user's input
 
 let humanChoice=undefined
+let computerScore = 0;
+let humanScore = 0;
 
-function getHumanChoice(rock) {
+/*const btn = document.querySelectorAll("button");
+const rockBtn = document.querySelector("#rockBtn");
+const paperBtn = document.querySelector("#paperBtn");
+const scissorsBtn = document.querySelector("#scissorsBtn");
+*/
+
+function getHumanChoice() {
+  /*rockBtn.addEventListener("click", () => {
+    console.log("human rock");
+    humanChoice = "rock";
+  });
+  paperBtn.addEventListener("click", () => {
+    console.log("human paper");
+    humanChoice = "paper";
+  });
+  scissorsBtn.addEventListener("click", () => {
+    console.log("human scissors")
+    humanChoice = "scissors";
+  });*/
   humanChoice = prompt("Choose rock, paper, or scissors :");
   humanChoice = humanChoice.toLowerCase();
 }
 
 //Now I need to define scores and increment them for wins and losses
 
-let computerScore = 0;
-let humanScore = 0;
+
+
+btn.forEach((button) => {
+  button.addEventListener("click", playRound)});
 
 function playRound() {
   getComputerChoice();
@@ -98,7 +120,7 @@ function playGame() {
   console.log(humanScore);
   console.log(computerScore);
   finalScore();
-}
+} 
 
 function finalScore() {
   if (humanScore > computerScore) {
